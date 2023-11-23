@@ -1,0 +1,38 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>{% block title %}{% endblock %}</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{% static 'conference/images/logo.ico' %}" type="image/x-icon" />
+    <link type="text/css" href="{% static 'conference/css/styles.css' %}" rel="stylesheet" />
+    {% block head %}
+    {% endblock %}
+</head>
+
+<body>
+    <header>
+        <!-- Верхняя часть страницы -->
+        <!-- {% block header %}
+        <h1>Заголовок страницы</h1>
+        {% endblock %} -->
+    </header>
+
+    <main>
+        <!-- Основное содержимое страницы -->
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer>
+        <!-- Нижняя часть страницы -->
+        <!-- {% block footer %}
+        <p>Авторские права</p>
+        {% endblock %} -->
+    </footer>
+</body>
+
+</html>

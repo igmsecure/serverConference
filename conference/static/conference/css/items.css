@@ -1,0 +1,223 @@
+.right-block {
+    min-width: 626px;
+    /*156*/
+    width: 100%;
+    max-width: 920px;
+    margin-left: 15px;
+}
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.main-header h2 {
+    margin-right: 5px;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.authors {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 10px 30px;
+    background-color: #FFFFFF;
+    border: 1px solid rgb(204, 204, 204);
+    border-radius: 10px;
+}
+
+.author-item {
+    position: relative;
+    display: flex;
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #FFFFFF;
+    border: 1px solid rgb(204, 204, 204);
+    border-radius: 10px;
+}
+
+.author-item img {
+    width: 150px;
+    height: 150px;
+    margin-right: 15px;
+    border-radius: 3px;
+}
+
+.author-item .line {
+    width: 1px;
+    height: 130px;
+    margin: auto 0;
+    background-color: #AAA6A6;
+    border-radius: 5px;
+}
+
+.author-item .text {
+    margin-left: 15px;
+}
+
+.author-item .text h3 {
+    margin-bottom: 5px;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.author-item .text ul {
+    list-style-type: none;
+}
+
+.author-item .text li {
+    margin-bottom: 5px;
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: #2B2B2B;
+}
+
+.author-item .text li span {
+    color: #2B2B2B;
+}
+
+.author-item .btn {
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    width: 160px;
+    height: 50px;
+    background-color: #FFFFFF;
+    border: 1px solid rgb(204, 204, 204);
+    color: #2B2B2B;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 50px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 7px;
+    transition: background-color .2s ease-in-out;
+}
+
+.author-item .btn:hover {
+    background-color: #F5F5F5;
+}
+
+.author-text {
+    text-align: center;
+}
+
+/* <!----------------------------  Media Screen  ----------------------------!> */
+
+@media screen and (max-width: 920px) {
+    .right-block {
+        min-width: 100%;
+        max-width: 100%;
+        margin-left: 0px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .main-header {
+        flex-direction: column;
+    }
+
+    .main-header h2 {
+        font-size: 16px;
+        margin: 0 auto 10px 0;
+    }
+
+    .authors {
+        padding-bottom: 20px;
+        border-radius: 10px;
+    }
+
+    .author-item {
+        height: auto;
+        margin-bottom: 10px;
+        padding-bottom: 50px;
+        border-radius: 10px;
+    }
+
+    .author-item img {
+        width: 100px;
+        height: 100px;
+        margin-right: 10px;
+    }
+
+    .author-item .line {
+        margin-top: 5px;
+        height: 90px;
+    }
+
+    .author-item .text {
+        margin-left: 10px;
+    }
+
+    .author-item .text li {
+        margin-bottom: 0;
+        font-size: 14px;
+    }
+
+    .author-item .btn {
+        width: 120px;
+        height: 35px;
+        font-size: 14px;
+        line-height: 35px;
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+    .author-item img {
+        width: 75px;
+        height: 75px;
+        margin-right: 10px;
+    }
+
+    .author-item .line {
+        margin-top: 5px;
+        height: 65px;
+    }
+}
+
+
+@media screen and (max-width: 400px) {
+    .main-header h2 {
+        font-size: 14px;
+    }
+
+    .author-item {
+        height: auto;
+        margin-bottom: 10px;
+        padding-bottom: 50px;
+        border-radius: 10px;
+    }
+
+    .author-item img {
+        width: 75px;
+        height: 75px;
+        margin-right: 10px;
+    }
+
+    .author-item .text h3 {
+        font-size: 14px;
+    }
+
+    .author-item .text li {
+        margin-bottom: 0;
+        font-size: 12px;
+    }
+
+    .author-item .btn {
+        font-size: 12px;
+        line-height: 30px;
+    }
+}

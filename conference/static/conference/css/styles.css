@@ -1,0 +1,67 @@
+@import url('Fonts.css');
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 25px 80px 20px;
+  background-color: #F5F5F5;
+  font-family: 'Montserrat', sans-serif;
+  /* color: #2B2B2B; */
+}
+
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* default properties  */
+a {
+  text-decoration: none;
+}
+
+
+/* <!----------------------------  Main  ----------------------------!> */
+
+.main {
+  margin-bottom: 20px;
+}
+
+.main-content {
+  display: flex;
+  align-items: flex-start;
+}
+
+
+/* <!----------------------------  Media Screen  ----------------------------!> */
+
+@media screen and (max-width: 1200px) {
+  body {
+    padding: 15px 15px 20px;
+  }
+
+}
+
+
+@media screen and (max-width: 920px) {
+  body {
+    padding: 15px 20px 10px;
+  }
+
+  .main-content {
+    flex-direction: column;
+  }
+}
+
+
+@media screen and (max-width: 800px) {
+  body {
+    padding: 10px 10px 15px;
+  }
+}
