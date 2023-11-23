@@ -1,0 +1,86 @@
+{% extends 'conference/base.html' %}
+{% load static %}
+
+{% block title %}Домашняя страница{% endblock %}
+
+{% block head %}
+<link type="text/css" href="{% static 'conference/css/search.css' %}" rel="stylesheet" />
+<link type="text/css" href="{% static 'conference/css/sidebar.css' %}" rel="stylesheet" />
+<link type="text/css" href="{% static 'conference/css/items.css' %}" rel="stylesheet" />
+{% endblock %}
+
+{% block content %}
+<section class="main authors-info">
+    <div class="container">
+
+        <div class="main-content">
+
+            <div class="sidebar">
+                <h2>Навигация</h2>
+                <div class="line"></div>
+                {% for m in menu %}
+                {% if not forloop.last %}
+                <a class="btn" href="{% url m.url_name %}">{{m.title}}</a>
+                {% else %}
+                <a class="btn" href="{% url m.url_name %}">{{m.title}}</a>
+                {% endif %}
+                {% endfor %}
+            </div>
+
+            <div class="right-block">
+                <div class="authors">
+
+                    <div class='header-filter'>
+                        <div class="search-container">
+                            <form class="search-bar" action="/authors" method="GET">
+
+                                <input type="text" class="searchTerm" name="search" placeholder="Фильтр по фамилии"
+                                    value="{{search_query}}">
+
+                                <button type="submit" class="searchButton">
+                                    Поиск
+                                </button>
+                            </form>
+                        </div>
+
+                    </div>
+
+                    <header class="main-header">
+                        <h2>Список авторов</h2>
+                    </header>
+
+                    {% for author in authors %}
+
+                    <div class="author-item">
+                        <img src="{{author.image}}" alt="">
+
+                        <div class="line"></div>
+                        <div class="text">
+                            <h3>
+                                {{ author.middle_name }} {{ author.first_name }} {{ author.last_name }}
+                            </h3>
+
+                            <ul>
+                                <li class="reg-date">Дата рождения: <span>{{ author.date_of_birth }}</span></li>
+                                <li class="articles-count">Страна: <span>{{author.country}}</span></li>
+                            </ul>
+                        </div>
+
+                        <a href="{% url 'author' author.id %}">
+                            <button class="btn">Открыть</button>
+                        </a>
+
+                    </div>
+                    <h4>
+                        {% empty %}
+                        <p class="author-text"> Авторы не найдены</p>
+                    </h4>
+
+                    {% endfor %}
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+{% endblock %}
