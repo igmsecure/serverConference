@@ -1,0 +1,35 @@
+# OSX #
+.DS_Store
+.AppleDouble
+.LSOverride
+Thumbs.db
+.coverage
+.tox/
+.eggs/
+
+# Django-specific files
+*.log 
+*.pot
+*.pyc
+__pycache__/
+local_settings.py
+db.sqlite3
+
+# PyCharm-specific files
+.idea/
+
+# Jupyter Notebook 
+.ipynb_checkpoints 
+
+# pyenv 
+.python-version 
+
+# SageMath parsed files 
+*.sage.py 
+
+# Virtual Environment
+venv/
+env/
+
+
+
