@@ -567,6 +567,7 @@ def AsyncReviewing(request, articleID, userID):
 
 
 
+# async update method
 @api_view(['PUT'])
 def updateArticleReviewing(request, articleID):
     """
